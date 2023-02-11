@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Booking\BookingResource;
 use Illuminate\Http\Request;
-
+use App\Repositories\Booking\BookingRepositoryInterface;
+use App\Repositories\Client\ClientRepositoryInterface;
+use App\Repositories\Tour\TourRepositoryInterface;
+use App\Traits\TourDealTrait;
 class BookingController extends Controller
 {
     use TourDealTrait;
@@ -88,9 +92,8 @@ class BookingController extends Controller
             'child-price' => $results['childPrice'],
             'date' => $request['date']
         ];
-        $this->bookingRepository->create($bookingData);
+        $booking = $this->bookingRepository->create($bookingData);
 
-        session()->flash('message', __('messages.successfully_booking_created'));
-        return redirect(route('tours.index'));
+        return BookingResource::make($booking);
     }
 }

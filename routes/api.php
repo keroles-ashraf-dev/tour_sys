@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Api\BookingController;
 use App\Http\Controllers\Api\TourController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,5 +20,5 @@ Route::controller(TourController::class)->group(function () {
 });
 
 Route::controller(BookingController::class)->group(function () {
-    Route::post('/bookings/create', 'create');
+    Route::post('/bookings/store', 'store');
 });

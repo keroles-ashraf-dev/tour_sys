@@ -27,4 +27,12 @@ class Tour extends Model
     {
         return $this->hasMany(TourTranslation::class);
     }
+
+    /**
+     * Get the tour deals
+     */
+    public function deals()
+    {
+        return $this->hasMany(Deal::class);
+    }
 }

@@ -5,7 +5,7 @@ namespace App\Traits;
 trait TourDealTrait
 {
 	/**
-	 * Pick the proper deal for the given booking
+	 * Pick the proper deal for the given tour
 	 * 
 	 * @return array
 	 */
@@ -16,7 +16,7 @@ trait TourDealTrait
 
 		foreach ($deals as $deal) {
 
-			// first check if there deal for adults and children
+			// first check if there deal for adults and children together
 			if (
 				!is_null($deal->min_adults_count) &&
 				!is_null($deal->min_children_count) &&

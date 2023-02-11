@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Resources\Booking;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class TourResource extends JsonResource
+class BookingResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,8 +16,10 @@ class TourResource extends JsonResource
     {
         $data = [
             'id' => $this->id,
-            'slug' => $this->slug,
-            'name' => $this->name,
+            'tour_id' => $this->tour_id,
+            'client_id' => $this->client_id,
+            'adults_count' => $this->adults_count,
+            'children_count' => $this->children_count,
             'adult_price' => $this->adult_price,
             'child_price' => $this->child_price,
         ];

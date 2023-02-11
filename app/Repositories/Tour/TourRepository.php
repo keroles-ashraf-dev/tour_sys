@@ -47,7 +47,7 @@ class TourRepository implements TourRepositoryInterface
 	 * create new record
 	 * 
 	 * @param array $data
-	 * @return void
+	 * @return Model
 	 */
 	public function create($data)
 	{
@@ -65,5 +65,7 @@ class TourRepository implements TourRepositoryInterface
 				'name' => $data['name_' . $code],
 			]);
 		}
+
+		return $tour;
 	}
 }

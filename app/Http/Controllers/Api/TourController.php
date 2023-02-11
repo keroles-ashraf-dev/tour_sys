@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\TourCollection;
+use App\Http\Resources\Tour\TourCollection;
 use App\Repositories\Tour\TourRepositoryInterface;
 
 class TourController extends Controller

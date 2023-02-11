@@ -6,7 +6,6 @@ use App\Repositories\Booking\BookingRepositoryInterface;
 use App\Repositories\Client\ClientRepositoryInterface;
 use App\Repositories\Tour\TourRepositoryInterface;
 use App\Traits\TourDealTrait;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller

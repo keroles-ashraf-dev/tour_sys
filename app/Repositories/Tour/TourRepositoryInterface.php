@@ -12,7 +12,7 @@ interface TourRepositoryInterface
     public function all();
 
     /**
-     * Get record of passed id
+     * Get record of passed slug
      * 
      * @param string $slug
      * @return \Illuminate\Support\Collection
